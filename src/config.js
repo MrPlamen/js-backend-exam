@@ -1,4 +1,4 @@
-const JWT_SECRET = '0zqkGbxHL/tCBPfZid5BkFUxEUEG3/tSJlPjb39BsHGgRGD3/GpkwTnSFmE=';
+const JWT_SECRET = '7347wuirgrygy/tCBPfZid5BkFUxESJlPjb39BsHGgRGD3/Gpkwwrhfurf=';
 const AUTH_COOKIE_NAME = 'auth';
 
 export {
