@@ -23,7 +23,7 @@ async function login(email, password) {
 
 async function register(userData) {
     if (userData.password !== userData.confirmPassword) {
-        throw new Error('Password must be correct!')
+        throw new Error('Passwords did not match!')
     }
 
     const registeredUser = await User.findOne({ email: userData.email }).select({ _id: 1 });
