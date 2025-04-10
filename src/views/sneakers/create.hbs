@@ -1,0 +1,41 @@
+{{setTitle 'SneakersParadise | Create Offer'}}
+
+    <div class="create-wrapper">
+        <section class="create-hero">
+            <div class="wrap">
+                <h2>Add Sneakers</h2>
+            </div>
+        </section>
+
+        <section class="create-form">
+            <div class="wrap">
+                <form method="POST">
+                    <div class="input-wrap">
+                        <input type="text" id="brand" name="brand" value="{{sneakers.brand}}" placeholder="Brand">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="model" name="model" value="{{sneakers.model}}" placeholder="Model">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="number" id="price" name="price" value="{{sneakers.price}}" placeholder="Price">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="condition" name="condition" value="{{sneakers.condition}}" placeholder="Condition">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="number" id="year" name="year" value="{{sneakers.year}}" placeholder="Year">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="number" id="size" name="size" value="{{sneakers.size}}" placeholder="Size">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="image" name="image" value="{{sneakers.image}}" placeholder="ImageUrl">
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" id="description" name="description" value="{{sneakers.description}}" placeholder="Description">
+                    </div>
+                    <button type="submit" class="btn">Add</button>
+                </form>
+            </div>
+        </section>
+    </div>

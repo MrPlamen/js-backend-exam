@@ -8,7 +8,7 @@ const routes = Router();
 
 routes.use(homeController);
 routes.use('/auth', authController);
-routes.use('/devices', sneakersController)
+routes.use('/sneakers', sneakersController)
 
 routes.get('*', (req, res) => {
     res.render('404');
