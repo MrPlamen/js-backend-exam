@@ -6,9 +6,9 @@ async function create(sneakersData, userId) {
 }
 
 async function getLatest() {
-    const sneakerss = await Sneakers.find({}).sort({ createdAt: 'desc' }).limit(3);
+    const sneakers = await Sneakers.find({}).sort({ createdAt: 'desc' }).limit(3);
 
-    return sneakerss;
+    return sneakers;
 }
 
 async function getAll(filter = {}) {

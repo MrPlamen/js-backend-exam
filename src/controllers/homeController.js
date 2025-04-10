@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import deviceService from "../services/deviceService.js";
+import deviceService from "../services/sneakersService.js";
 import { getErrorMessage } from "../utils/errorUtils.js";
 import { isAuthRouteGuard } from "../middlewares/authMiddleware.js";
 
