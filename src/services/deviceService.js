@@ -1,19 +1,18 @@
-import Device from "../models/Device.js";
+import Sneakers from "../models/Sneakers.js";
 
-async function create(deviceData, userId) {
-    deviceData.owner = userId;
-    await Device.create(deviceData);
+async function create(sneakersData, userId) {
+    sneakersData.owner = userId;
+    await Sneakers.create(sneakersData);
 }
 
 async function getLatest() {
-    const devices = await Device.find({}).sort({ createdAt: 'desc' }).limit(3);
-    // const devices = await Device.find({}).sort({ _id: 'desc' }).limit(3);
+    const sneakerss = await Sneakers.find({}).sort({ createdAt: 'desc' }).limit(3);
 
-    return devices;
+    return sneakerss;
 }
 
 async function getAll(filter = {}) {
-    let query = Device.find({});
+    let query = Sneakers.find({});
 
     if (filter.owner) {
         query = query.find({ owner: filter.owner });
@@ -26,49 +25,49 @@ async function getAll(filter = {}) {
     return query;
 }
 
-async function getOne(deviceId) {
-    const device = await Device.findOne({ _id: deviceId });
+async function getOne(sneakersId) {
+    const sneakers = await Sneakers.findOne({ _id: sneakersId });
 
-    return device;
+    return sneakers;
 }
 
-async function prefer(deviceId, userId) {
-    const device = await Device.findById(deviceId);
+async function prefer(sneakersId, userId) {
+    const sneakers = await Sneakers.findById(sneakersId);
 
-    if (device.owner.equals(userId)) {
+    if (sneakers.owner.equals(userId)) {
         throw new Error('Cannot prefer own offers!');
     }
 
-    if (device.preferredList.includes(userId)) {
+    if (sneakers.preferredList.includes(userId)) {
         throw new Error('You have already preferred this offer!');
     }
 
-    device.preferredList.push(userId);
+    sneakers.preferredList.push(userId);
 
-    return device.save();
+    return sneakers.save();
 }
 
-async function deleteOffer(deviceId, userId) {
-    const device = await Device.findById(deviceId);
+async function deleteOffer(sneakersId, userId) {
+    const sneakers = await Sneakers.findById(sneakersId);
 
-    if (!device.owner.equals(userId)) {
+    if (!sneakers.owner.equals(userId)) {
         throw new Error('Cannot delete offers of other users!');
     }
 
-    return await Device.findByIdAndDelete(deviceId);
+    return await Sneakers.findByIdAndDelete(sneakersId);
 }
 
-async function update(deviceId, userId, deviceData) {
-    const device = await Device.findById(deviceId);
+async function update(sneakersId, userId, sneakersData) {
+    const sneakers = await Sneakers.findById(sneakersId);
 
-    if (!device.owner.equals(userId)) {
+    if (!sneakers.owner.equals(userId)) {
         throw new Error('Cannot edit offers of other users!');
     }
 
-    return await Device.findByIdAndUpdate(deviceId, deviceData, { runValidators: true })
+    return await Sneakers.findByIdAndUpdate(sneakersId, sneakersData, { runValidators: true })
 }
 
-const deviceService = {
+const sneakersService = {
     create,
     getLatest,
     getAll,
@@ -78,4 +77,4 @@ const deviceService = {
     update
 }
 
-export default deviceService;
+export default sneakersService;
