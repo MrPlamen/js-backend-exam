@@ -9,10 +9,9 @@ import { setTitle } from "./helpers/hbsHelpers.js";
 
 const app = express();
 
-// DB configuration
+// db configuration
 try {
-    // TODO: Change DB name
-    const uri = 'mongodb://localhost:27017/techStore';
+    const uri = 'mongodb://localhost:27017/sneakersParadise';
     await mongoose.connect(uri);
 
     console.log('DB connected succesfully.');
