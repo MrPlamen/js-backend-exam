@@ -12,8 +12,8 @@ sneakersController.get('/', async (req, res) => {
 
         res.render('sneakers/catalog', { sneakers });
     } catch (error) {
-        const curError = getErrorMessage(error);
-        res.render('sneakers/catalog', { error: curError });
+        const currentError = getErrorMessage(error);
+        res.render('sneakers/catalog', { error: currentError });
     }
 });
 
@@ -30,8 +30,8 @@ sneakersController.post('/create', isAuthRouteGuard, async (req, res) => {
 
         res.redirect('/sneakers');
     } catch (error) {
-        const curError = getErrorMessage(error);
-        res.render('sneakers/create', { error: curError, sneakers: sneakersData })
+        const currentError = getErrorMessage(error);
+        res.render('sneakers/create', { error: currentError, sneakers: sneakersData })
     }
 });
 
@@ -45,8 +45,8 @@ sneakersController.get('/:sneakersId/details', async (req, res) => {
 
         res.render('sneakers/details', { sneakers, isOwner, isPreferred })
     } catch (error) {
-        const curError = getErrorMessage(error);
-        res.render('/', { error: curError })
+        const currentError = getErrorMessage(error);
+        res.render('/', { error: currentError })
     }
 });
 
@@ -58,8 +58,8 @@ sneakersController.get('/:sneakersId/prefer', isAuthRouteGuard, async (req, res)
         await sneakersService.prefer(sneakersId, userId);
         res.redirect(`/sneakers/${sneakersId}/details`);
     } catch (error) {
-        const curError = getErrorMessage(error);
-        res.render('404', { error: curError })
+        const currentError = getErrorMessage(error);
+        res.render('404', { error: currentError })
         // res.redirect(`/sneakers/${sneakersId}/details`);
     }
 });
@@ -72,8 +72,8 @@ sneakersController.get('/:sneakersId/delete', isAuthRouteGuard, async (req, res)
         await sneakersService.deleteOffer(sneakersId, userId);
         res.redirect('/sneakers');
     } catch (error) {
-        const curError = getErrorMessage(error);
-        res.render('404', { error: curError });
+        const currentError = getErrorMessage(error);
+        res.render('404', { error: currentError });
     }
 });
 
@@ -89,8 +89,8 @@ sneakersController.get('/:sneakersId/edit', isAuthRouteGuard, async (req, res) =
 
         res.render('sneakers/edit', { sneakers })
     } catch (error) {
-        const curError = getErrorMessage(error);
-        res.render('404', { error: curError });
+        const currentError = getErrorMessage(error);
+        res.render('404', { error: currentError });
         //Look if the examers want to display or redirect to 404
         // res.redirect(`/sneakers/${sneakersId}/details`) 
     }
@@ -107,8 +107,8 @@ sneakersController.post('/:sneakersId/edit', isAuthRouteGuard, async (req, res) 
 
         res.redirect(`/sneakers/${sneakersId}/details`);
     } catch (error) {
-        const curError = getErrorMessage(error);
-        res.render('sneakers/edit', { sneakers: sneakersData, error: curError });
+        const currentError = getErrorMessage(error);
+        res.render('sneakers/edit', { sneakers: sneakersData, error: currentError });
     }
 });
 
