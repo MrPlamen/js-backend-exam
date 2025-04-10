@@ -4,12 +4,12 @@
         <div class="wrap">
             <h3>Added Sneakers</h3>
             <div class="sneakers-list">
-                {{#each sneakers}}  
+                {{#each ownSneakers}}  
                 <div class="sneaker">
                     <img src="{{this.image}}">
-                    <p><strong>Brand:</strong> Nike</p>
-                    <p><strong>Model:</strong> Air Jordan (Red & White)</p>
-                    <a href="#" class="btn">View Details</a>
+                    <p><strong>Brand:</strong> {{this.brand}}</p>
+                    <p><strong>Model:</strong> {{this.model}}</p>
+                    <a href="/sneakers/{{this._id}}/details" class="btn">View Details</a>
                 </div>
                 {{else}}       
                 <p class="no-post">You haven't added a sneakers post yet</p>
