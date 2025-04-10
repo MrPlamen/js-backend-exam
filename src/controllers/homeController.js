@@ -12,8 +12,8 @@ homeController.get('/', async (req, res) => {
 
         res.render('home', { sneakers });
     } catch (error) {
-        const curError = getErrorMessage(error);
-        res.render('home', { error: curError });
+        const currentError = getErrorMessage(error);
+        res.render('home', { error: currentError });
     }
 })
 
