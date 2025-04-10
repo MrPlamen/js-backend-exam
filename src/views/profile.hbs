@@ -22,20 +22,16 @@
         <div class="wrap">
             <h3>Preferred Shoes</h3>
             <div class="sneakers-list">
+                {{#each preferredSneakers}} 
                 <div class="sneaker">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/angular-project-4050b.appspot.com/o/js%20back-end%2Fconerse.webp?alt=media&token=1c0512d1-c859-464a-a2fd-11388ac4fe52" alt="Converse (White with Red Face)">
-                    <p><strong>Brand:</strong> Converse</p>
-                    <p><strong>Model:</strong> White with Red Face</p>
-                    <a href="#" class="btn">View Details</a>
+                    <img src="{{this.image}}">
+                    <p><strong>Brand:</strong> {{this.brand}}</p>
+                    <p><strong>Model:</strong> {{this.model}}</p>
+                    <a href="/sneakers/{{this._id}}/details" class="btn">View Details</a>
                 </div>
-                <div class="sneaker">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/angular-project-4050b.appspot.com/o/js%20back-end%2Fmulti-color.webp?alt=media&token=1094585a-8b08-4b79-970a-337ecc6caf9a" alt="Adidas Multicolor">
-                    <p><strong>Brand:</strong> Adidas</p>
-                    <p><strong>Model:</strong> Multicolor</p>
-                    <a href="#" class="btn">View Details</a>
-                </div>
-    
+                {{else}}      
                 <p class="no-post">You haven't preferred any sneakers yet</p>
+                {{/each}}
             </div>
         </div>
     </section>
