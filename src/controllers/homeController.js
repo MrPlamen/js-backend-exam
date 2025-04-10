@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import deviceService from "../services/sneakersService.js";
+import sneakersService from "../services/sneakersService.js";
 import { getErrorMessage } from "../utils/errorUtils.js";
 import { isAuthRouteGuard } from "../middlewares/authMiddleware.js";
 
@@ -8,9 +8,9 @@ const homeController = Router();
 
 homeController.get('/', async (req, res) => {
     try {
-        const devices = await deviceService.getLatest();
+        const sneakers = await sneakersService.getLatest();
 
-        res.render('home', { devices });
+        res.render('home', { sneakers });
     } catch (error) {
         const curError = getErrorMessage(error);
         res.render('home', { error: curError });
@@ -22,12 +22,12 @@ homeController.get('/about', (req, res) => {
 });
 
 homeController.get('/profile', isAuthRouteGuard, async (req, res) => {
-    const ownDevices = await deviceService.getAll({ owner: req.user._id });
-    const preferredDevices = await deviceService.getAll({ preferredBy: req.user._id });
+    const ownSneakers = await sneakersService.getAll({ owner: req.user._id });
+    const preferredSneakers = await sneakersService.getAll({ preferredBy: req.user._id });
     
     res.render('profile', {
-        ownDevices,
-        preferredDevices
+        ownSneakers,
+        preferredSneakers
     });
 });
 
