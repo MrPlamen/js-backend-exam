@@ -1,12 +1,11 @@
 .login-hero {
-    padding: 50px 0;
     text-align: center;
     color: #fff;
-    margin-top: 80px;
+    margin-top: -50px;
+    
 }
 
 .login-hero h2 {
-    margin: 0 0 10px;
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -20,16 +19,19 @@
     font-weight: bold;
 }
 
-.login-form .container {
+.login-form .wrap {
     max-width: 500px;
     margin: 0 auto;
-    background: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background: rgb(232,147,252);
+    background: linear-gradient(214deg, rgba(232,147,252,1) 0%, rgba(38,212,219,1) 81%);
+    border: 5px solid black;
+    margin-bottom: 40vh;
 }
 
-.login-form .form-group {
+.login-form .input-wrap {
     margin-bottom: 15px;
 }
 

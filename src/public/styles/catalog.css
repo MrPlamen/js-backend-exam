@@ -1,16 +1,11 @@
-.catalog-hero {
-  padding: 50px 0;
-  text-align: center;
-  color: #fff;
-  margin-top: 80px;
+.catalog{
+  background: rgb(232,147,252);
+  background: linear-gradient(214deg, rgba(232,147,252,1) 0%, rgba(38,212,219,1) 81%);
 }
-
-.catalog-hero h2 {
-  margin: 0 0 10px;
-  font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #ff9900;
+.heading-catalog{
+  margin: 0;
+  text-align: center;
+  font-size: 53px;
 }
 
 .catalog-hero p {
@@ -20,53 +15,42 @@
   font-weight: bold;
 }
 
-.catalog .product-grid {
+.catalog .sneaker-catalog {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.catalog .product-item {
-  background: #fff;
-  padding: 20px;
-  text-align: center;
+.catalog .sneakers-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #dbd8d8;
   border: 1px solid #ddd;
   border-radius: 10px;
-  margin: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 30em;
+  width: 40vw;
+  height: 60vh;
 }
 
-.catalog .product-item:hover {
+.catalog .sneakers-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.catalog .product-item img {
-  max-width: 100%;
-  height: auto;
+.catalog .sneakers-item img {
+  height: 50vh;
   border-bottom: 1px solid #ddd;
-  padding-bottom: 15px;
-  margin-bottom: 15px;
   transition: transform 0.3s ease;
 }
 
-.catalog .product-item:hover img {
+.catalog .sneakers-item:hover img {
   transform: scale(1.05);
 }
 
-.catalog .product-item h3 {
-  font-size: 1.5rem;
-  margin: 0 0 10px;
-}
 
-.catalog .product-item p {
-  font-size: 1.2rem;
-  color: #333;
-  margin: 0 0 15px;
-}
 
-.product-grid .no-post {
+.sneaker-catalog .no-post {
   margin: 6.75rem;
   font-size: 40px;
 }

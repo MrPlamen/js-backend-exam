@@ -1,8 +1,6 @@
 .register-hero {
-    padding: 50px 0;
     text-align: center;
     color: #fff;
-    margin-top: 80px;
 }
 
 .register-hero h2 {
@@ -10,30 +8,26 @@
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #ff9900;
 }
 
-.register-hero p {
-    margin: 0 0 20px;
-    font-size: 1.2rem;
-    color:#0073e6;
-    font-weight: bold;
-}
 
 .register-form {
     padding: 2rem 0;
 }
 
-.register-form .container {
+.register-form .wrap {
     max-width: 500px;
     margin: 0 auto;
-    background: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background: rgb(232,147,252);
+    background: linear-gradient(214deg, rgba(232,147,252,1) 0%, rgba(38,212,219,1) 81%);
+    border: 5px solid black;
+    margin-bottom: 30vh;
 }
 
-.register-form .form-group {
+.register-form .input-wrap {
     margin-bottom: 15px;
 }
 

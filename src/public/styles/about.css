@@ -1,10 +1,16 @@
 .about-hero {
-  background: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAzL3Jhd3BpeGVsX29mZmljZV81M19hX21pbmltYWxfYW5kX2xlc3NfZGV0YWlsX2lsbHVzdHJhdGlvbl9vZl9jb19kM2Q3N2VhNS02YjQyLTQ3MTEtYmNkYy04NmY0NGNlNWZiNzMuanBn.jpg")
+  background: url("https://firebasestorage.googleapis.com/v0/b/angular-project-4050b.appspot.com/o/js%20back-end%2Fbg.webp?alt=media&token=71386cf9-1d8d-476c-9f84-0e6603c3c8a9")
     no-repeat center center/cover;
-  padding: 280px 0 180px;
   text-align: center;
   color: #fff;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .about-hero h2 {
@@ -12,20 +18,27 @@
   font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: white;
+  background-color: #666464d5;
+  padding: 30px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 .about-hero p {
-  margin: 0 0 20px;
+  margin-top: -10px;
   font-size: 1.2rem;
+  background-color: #666464d5;
+  padding: 30px;
+  border-radius: 20px;
 }
 
 .about-content {
   padding: 2rem 0;
-  background-color: #fff;
+  background: rgb(232,147,252);
+  background: linear-gradient(214deg, rgba(232,147,252,1) 0%, rgba(38,212,219,1) 81%);
 }
 
-.about-content .container {
+.about-content .wrap {
   max-width: 800px;
   margin: 0 auto;
 }

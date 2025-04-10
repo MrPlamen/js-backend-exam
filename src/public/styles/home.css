@@ -1,37 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Honk", system-ui;
   margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  background-color: #000000;
   line-height: 1.6;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
+.nav-wrapper {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 75vw;
+}
+
+.hero-wrap{
+  background: linear-gradient(to right, #ffffff7c, #30e3f0a2);
+  margin-top: -22vh;
+  padding: 20px;
+  width: 80vw;
+  border-radius: 20px;
 }
 
 header {
-  background: linear-gradient(to right, #0073e6, #00aaff);
+  background: linear-gradient(to right, #ffffff7c, #30e3f08c);
   color: #fff;
   padding: 1rem 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+  height: 10vh; 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  transition: background 0.3s ease;
+  transition: background 1.3s ease;
+
 }
 
-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #ffcc00;
+.logo{
+  width: 10vw;
 }
-
 nav ul {
   list-style: none;
   padding: 0;
@@ -44,25 +49,29 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+font-size: 22px;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ff0;
-  transform: scale(1.1);
+  border-bottom: 2px solid rgb(92, 4, 95);
+  border-radius: 10px;
+  padding: 0px 5px;
 }
 
 .hero {
-  background: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAzL3Jhd3BpeGVsX29mZmljZV81M19hX21pbmltYWxfYW5kX2xlc3NfZGV0YWlsX2lsbHVzdHJhdGlvbl9vZl9jb19kM2Q3N2VhNS02YjQyLTQ3MTEtYmNkYy04NmY0NGNlNWZiNzMuanBn.jpg")
+  background: url("https://firebasestorage.googleapis.com/v0/b/angular-project-4050b.appspot.com/o/js%20back-end%2Fbg.webp?alt=media&token=71386cf9-1d8d-476c-9f84-0e6603c3c8a9")
     no-repeat center center/cover;
   padding: 280px 0 100px;
   text-align: center;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero h2 {
+.hero-wrap h2 {
   margin: 0 0 10px;
   font-size: 3rem;
   text-transform: uppercase;
@@ -70,13 +79,14 @@ nav ul li a:hover {
   color: white;
 }
 
-.hero p {
+.hero-wrap p {
   margin: 0 0 20px;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
 }
 
 .btn {
-  background: #0073e6;
+  background: #000000;
+  font-size: 25px;
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
@@ -89,12 +99,13 @@ nav ul li a:hover {
   transform: translateY(-5px);
 }
 
-.products {
+.sneakers {
   padding: 2rem 0;
-  background-color: #fff;
+  background: rgb(232,147,252);
+  background: linear-gradient(214deg, rgba(232,147,252,1) 0%, rgba(38,212,219,1) 81%);
 }
 
-.products h2 {
+.sneakers h2 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 2.5rem;
@@ -102,46 +113,48 @@ nav ul li a:hover {
   color: #333;
 }
 
-.product-grid {
+.sneaker-catalog {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.product-item {
+.sneakers-item {
   background: #fff;
   padding: 20px;
+   width: 22vw;
   text-align: center;
   border: 1px solid #ddd;
   border-radius: 10px;
   margin: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
 }
 
-.product-item:hover {
+.sneakers-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.product-item img {
-  max-width: 100%;
-  height: auto;
+.sneakers-item img {
+  max-width: 22vw;
+  height: 50vh;
   border-bottom: 1px solid #ddd;
-  padding-bottom: 15px;
   margin-bottom: 15px;
   transition: transform 0.3s ease;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
 }
 
-.product-item:hover img {
+.sneakers-item:hover img {
   transform: scale(1.05);
 }
 
-.product-item h3 {
+.sneakers-item h3 {
   font-size: 1.5rem;
   margin: 0 0 10px;
 }
 
-.product-item p {
+.sneakers-item p {
   font-size: 1.2rem;
   color: #333;
   margin: 0 0 15px;
@@ -152,15 +165,15 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1rem 0;
-  margin-top: 40px;
   position: relative;
+  font-size: 22px;
 }
 
 footer p {
   margin: 0;
 }
 
-.errorContainer {
+.error-wrap {
   position: fixed;
   right: 100px;
   min-width: 100px;
@@ -172,18 +185,18 @@ footer p {
   color: rgb(255, 255, 255);
   height: auto;
   width: 320px;
-  box-shadow: 0 5px 10px #ffeae7;
 }
 
-.errorContainer > p {
-  background: #0073e6;
-  font-size: 20px;
+.error-wrap > p {
+  background: #f5f5f5;
+  border: 3px solid black;
+  font-size: 26px;
   padding: 20px;
   height: auto;
   border-radius: 20px;
 }
 
-.errorContainer {
+.error-wrap {
   -moz-animation: cssAnimation 0s ease-in 2s forwards;
   /* Firefox */
   -webkit-animation: cssAnimation 0s ease-in 2s forwards;

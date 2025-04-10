@@ -1,76 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    line-height: 1.6;
+  font-family: "Honk", system-ui;
+  margin: 0;
+  background-color: #f4f4f4;
+  line-height: 1.6;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+.nav-wrapper {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 75vw;
 }
 
+.hero-wrap{
+  background: linear-gradient(to right, #ffffff7c, #30e3f0a2);
+  margin-top: -22vh;
+  padding: 20px;
+  width: 80vw;
+  border-radius: 20px;
+}
+.added-sneakers, .preffered-snekares{
+  width: 80vw;
+}
 header {
-    background: linear-gradient(to right, #0073e6, #00aaff);
-    color: #fff;
-    padding: 1rem 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background 0.3s ease;
+  background: linear-gradient(to right, #ffffff7c, #30e3f08c);
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 10vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 1.3s ease;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    color: #ffcc00;
-    animation: fadeIn 2s;
+.logo{
+  width: 10vw;
 }
-
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 nav ul li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
+font-size: 22px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(232,147,252);
+    background: linear-gradient(214deg, rgba(232,147,252,1) 0%, rgba(38,212,219,1) 81%);
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
-    transform: scale(1.1);
+  border-bottom: 2px solid rgb(92, 4, 95);
+  border-radius: 10px;
+  padding: 0px 5px;
 }
 
 .profile-hero {
-    background: linear-gradient(to right, #00aaff, #0073e6);
-    padding: 80px 0;
+    background: rgba(0, 0, 0, 0.733);
     text-align: center;
-    color: #fff;
-    margin-top: 80px;
     animation: fadeIn 3s;
-}
+    width: 70vw;
+    margin-top: 20px;
+    border-radius: 30px;
+} 
 
 .profile-hero h2 {
     margin: 0 0 10px;
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #ffcc00;
-    animation: textGlow 2s infinite;
+
 }
 
 .profile-hero p {
@@ -78,7 +92,7 @@ nav ul li a:hover {
     font-size: 1.5rem;
 }
 
-.created-laptops, .preferred-laptops {
+.added-sneakers, .preffered-snekares {
     padding: 2rem 0;
     background-color: #fff;
     margin-top: 20px;
@@ -88,45 +102,35 @@ nav ul li a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.created-laptops:hover, .preferred-laptops:hover {
+.added-sneakers:hover, .preffered-snekares:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.created-laptops .container, .preferred-laptops .container {
+.added-sneakers .wrap, .preffered-snekares .wrap {
     max-width: 1000px;
 }
 
-.created-laptops h3, .preferred-laptops h3 {
+.added-sneakers h3, .preffered-snekares h3 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #333;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
+    text-align: center;
 }
 
-.created-laptops h3::after, .preferred-laptops h3::after {
-    content: '';
-    width: 50px;
-    height: 3px;
-    background: #0073e6;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
-.laptop-list {
+.sneakers-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-.laptop-item {
-    background: #fff;
+.sneaker {
+    background: #d8d8d8;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -135,23 +139,24 @@ nav ul li a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.laptop-item:hover {
+.sneaker:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 2px solid black;
 }
 
-.laptop-item img {
-    max-width: 100%;
+.sneaker img {
+   height: 30vh;
     border-radius: 10px;
     margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
 
-.laptop-item:hover img {
-    transform: scale(1.05);
+.sneaker:hover img {
+    transform: scale(1.15);
 }
 
-.laptop-item p {
+.sneaker p {
     font-size: 1.2rem;
     color: #333;
     margin: 0 0 15px;
@@ -162,10 +167,14 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    margin-top: 40px;
     position: relative;
 }
 
 footer p {
     margin: 0;
+    width: 100vw;
+}
+
+.preffered-snekares .no-post{
+  text-align: center;
 }

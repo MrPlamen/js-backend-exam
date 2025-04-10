@@ -1,12 +1,22 @@
+.create-wrapper{
+    background: rgb(232,147,252);
+    background: linear-gradient(214deg, rgba(232,147,252,1) 0%, rgba(38,212,219,1) 81%);
+    padding-top: 40px;
+   padding-bottom: 20px;
+   
+}
+
 .create-hero {
-    padding: 50px 0;
+    background: rgba(0, 0, 0, 0.733);
     text-align: center;
-    color: #fff;
-    margin-top: 80px;
+    animation: fadeIn 3s;
+    width: 70vw;
+    margin-top: 20px;
+    border-radius: 30px;
+    margin-left: 15vw;
 }
 
 .create-hero h2 {
-    margin: 0 0 10px;
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -14,14 +24,14 @@
 }
 
 .create-hero p {
-    margin: 0 0 20px;
     font-size: 1.2rem;
     color: #0073e6;
     font-weight: bold;
 }
 
-.create-form .container {
-    max-width: 600px;
+
+.create-form .wrap {
+    max-width: 400px;
     margin: 0 auto;
     background: #fff;
     padding: 20px;
@@ -29,7 +39,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.create-form .form-group {
+.create-form .input-wrap {
     margin-bottom: 15px;
 }
 
@@ -40,6 +50,7 @@
 }
 
 .create-form input[type="text"],
+.create-form input[type="number"],
 .create-form input[type="file"] {
     width: 96%;
     padding: 10px;

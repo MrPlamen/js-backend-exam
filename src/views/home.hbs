@@ -1,30 +1,39 @@
-{{setTitle 'TechStore | Home'}}
-
-<section class="hero">
-    <div class="container">
-        <h2>Your One-Stop Shop for Laptops and Computers</h2>
-        <p>Find the best deals on the latest laptops, desktops, and accessories.</p>
-        <a href="/devices" class="btn">Shop Now</a>
-    </div>
-</section>
-
-<section class="products">
-    <div class="container">
-        <h2>Featured Products</h2>
-        <div class="product-grid">
-
-            {{#each devices}}
-            <div class="product-item">
-                <img src="{{this.image}}">
-                <h3>{{this.brand}} {{this.model}}</h3>
-                <p>${{this.price}}</p>
-                <a href="/devices/{{this._id}}/details" class="btn">View Details</a>
-            </div>
-            {{else}}
-            <p class="no-post">There haven't been any devices posted yet.</p>
-            {{/each}}
+    <section class="hero">
+        <div class="hero-wrap">
+            <h2>Welcome to Sneakers Paradise</h2>
+            <p>Where Style Meets Comfort!</p>
+            <a href="#" class="btn">Shop Now</a>
         </div>
-    </div>
+    </section>
+
+    <section class="sneakers">
+        <div class="wrap">
+            <h2>Featured Sneakers</h2>
+            <div class="sneaker-catalog">
+                <div class="sneakers-item">
+                    <img
+                        src="https://firebasestorage.googleapis.com/v0/b/angular-project-4050b.appspot.com/o/js%20back-end%2Fblue-black.webp?alt=media&token=5acb5401-3309-432c-8089-d4b1b1d87258">
+                    <h3>Nike Air Jordan (Blue & Black)</h3>
+                    <p>$180</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="sneakers-item">
+                    <img
+                        src="https://firebasestorage.googleapis.com/v0/b/angular-project-4050b.appspot.com/o/js%20back-end%2Fconerse.webp?alt=media&token=1c0512d1-c859-464a-a2fd-11388ac4fe52">
+                    <h3>Converse (White with Little Red Face)</h3>
+                    <p>$80</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="sneakers-item">
+                    <img
+                        src="https://firebasestorage.googleapis.com/v0/b/angular-project-4050b.appspot.com/o/js%20back-end%2Fred-white.webp?alt=media&token=f63d2645-487a-4125-95c2-eab40c9b427b">
+                    <h3>Nike Air Jordan (Red & White)</h3>
+                    <p>$190</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <p class="no-post">There haven't been any Sneakers posted yet.</p>
+            </div>
+        </div>
 
 
-</section>
+    </section>

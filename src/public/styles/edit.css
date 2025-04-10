@@ -1,8 +1,17 @@
+.edit-wrapper{
+    background: rgb(232,147,252);
+    background: linear-gradient(214deg, rgba(232,147,252,1) 0%, rgba(38,212,219,1) 81%);
+    padding-top: 40px;
+   padding-bottom: 20px;
+}
 .edit-hero {
-    padding: 50px 0;
+    background: rgba(0, 0, 0, 0.733);
     text-align: center;
-    color: #fff;
-    margin-top: 80px;
+    animation: fadeIn 3s;
+    width: 70vw;
+    margin-top: 20px;
+    border-radius: 30px;
+    margin-left: 15vw;
 }
 
 .edit-hero h2 {
@@ -20,7 +29,7 @@
     font-weight: bold;
 }
 
-.edit-form .container {
+.edit-form .wrap {
     max-width: 600px;
     margin: 0 auto;
     background: #fff;
@@ -29,7 +38,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.edit-form .form-group {
+.edit-form .input-wrap {
     margin-bottom: 15px;
 }
 

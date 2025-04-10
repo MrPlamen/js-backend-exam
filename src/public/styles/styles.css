@@ -2,9 +2,9 @@
 @import url(./catalog.css);
 @import url(./login.css);
 @import url(./register.css);
-@import url(./about.css);
-@import url(./details.css);
 @import url(./404.css);
-@import url(./create.css);
+@import url(./details.css);
 @import url(./edit.css);
-@import url(./profile.css);
+@import url(./about.css);
+@import url(./create.css);
+@import url(./profile.css); 
